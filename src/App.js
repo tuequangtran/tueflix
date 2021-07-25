@@ -13,9 +13,8 @@ function App() {
 	return (
 		<BrowserRouter>
 			<Header />
-			<SimpleBottomNavigation />
 			<div className="app">
-				<Container maxWidth="xl" disableGutters="true">
+				<Container maxWidth="xl">
 					{/* above makes page wider */}
 					<Switch>
 						<Route exact path="/" component={Trending} />
@@ -25,6 +24,7 @@ function App() {
 					</Switch>
 				</Container>
 			</div>
+			<SimpleBottomNavigation />
 		</BrowserRouter>
 	);
 }

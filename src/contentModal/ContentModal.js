@@ -54,8 +54,8 @@ export default function ContentModal({ children, media_type, id }) {
 			`https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=${process.env
 				.REACT_APP_API_KEY}&language=en-US`
 		);
-		console.log('videos', data.results[0].key);
-		setVideo(data.results[0].key); //need ?
+		console.log('videos', data.results[0]?.key);
+		setVideo(data.results[0]?.key); //need ?
 	};
 
 	useEffect(() => {
